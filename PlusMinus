@@ -1,5 +1,4 @@
 function plusMinus(arr) {
-    // Write your code here
     let numNegativos = 0;
     let numPositivos = 0;
     let numZero = 0;
