@@ -1,0 +1,16 @@
+function miniMaxSum(arr) {
+    
+    let minNumb = Math.min(...arr);
+    let maxNumb = Math.max(...arr);
+    let minSum = 0;
+    let maxSum = 0;
+    
+    for (let i = 0; i < arr.length; i++){
+            minSum += arr[i] ;
+            maxSum += arr[i] ;
+    } 
+    minSum -= maxNumb;
+    maxSum -= minNumb;
+    
+    console.log(minSum, maxSum)
+}
