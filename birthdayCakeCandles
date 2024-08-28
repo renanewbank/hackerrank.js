@@ -1,0 +1,11 @@
+function birthdayCakeCandles(candles) {
+    let tallCandles = 0;
+    let max = Math.max(...candles);
+    
+    for(let i = 0; i < candles.length; i++){
+        if(candles[i] === max){
+            tallCandles++;
+        }
+    }
+    return tallCandles
+}
