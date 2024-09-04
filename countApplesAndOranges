@@ -1,0 +1,28 @@
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    
+    let appleHouse = 0;
+    let orangeHouse = 0;
+    
+    let appleGround = 0;
+    let orangeGround = 0;
+        
+    for (let i = 0; i < apples.length; i++){
+        
+        appleGround = a + apples[i];
+        
+        if((appleGround >= s) && (appleGround <= t)){
+            appleHouse++; 
+        }
+    }
+    
+    for (let i = 0; i < oranges.length; i++){
+        
+       orangeGround = b + oranges[i]; 
+       
+       if((orangeGround >= s) && (orangeGround <= t)){
+            orangeHouse++;
+        }
+     }
+        console.log(appleHouse)
+        console.log(orangeHouse)
+}
