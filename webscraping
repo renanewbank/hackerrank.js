@@ -1,0 +1,19 @@
+// Entrar no site https://www.invistaii.com.br/venda/apartamento/?&pagina=1
+// A intenção é exibir o preço por metro quadradado de cada imóvel, para fins de comparação.
+
+function precoPmetro() {
+    let preco = document.querySelectorAll('.preco-imovel-card'); 
+
+    let metro = document.querySelectorAll('.card-footer');
+
+    for(let i = 0; i < metro.length; i++){
+    let divFilho = metro[i].firstElementChild;
+    let m = divFilho.textContent.split(' ')[0];
+    m = m.replace(',', '.');
+    let precoTexto = preco[i].textContent.split(' ');
+    let precoValor = precoTexto.length > 1 ? precoTexto[1].split('.')[0] : precoTexto[0];
+
+    precoValor = precoValor.replace(',', '.');
+    console.log('R$' + (parseFloat(precoValor) / parseFloat(m)).toFixed(2) + '0,00 m²');
+    }
+}
